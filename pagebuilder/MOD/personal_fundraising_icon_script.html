@@ -2,28 +2,28 @@
 <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
 
 <script type="text/javascript">
-jQuery.noConflict();
-jQuery(document).ready(function($){
-$('td > p.centered > a > img').attr('src',function(index,attr){
-      return attr.replace('images/friendraiser','images/personal_fund');
-});
+  jQuery.noConflict();
+  jQuery(document).ready(function($) {
+    $('td > p.centered > a > img').attr('src', function(index, attr) {
+      return attr.replace('images/friendraiser', 'images/personal_fund');
+    });
 
-	$('td > p.centered > a > img').each(function(){
-		$(this).removeAttr('width')
-		$(this).removeAttr('height');
-	});
+    $('td > p.centered > a > img').each(function() {
+      $(this).removeAttr('width')
+      $(this).removeAttr('height');
+    });
 
-});
+  });
 </script>
 
 <script type="text/javascript">
-jQuery.noConflict();
-jQuery(document).ready(function($){
- $('.internalPage table').each(function(){
- $(this).removeAttr('width');
- });
- $('.internalPage td').each(function(){
- $(this).removeAttr('width');
- });
-});
+  jQuery.noConflict();
+  jQuery(document).ready(function($) {
+    $('.internalPage table').each(function() {
+      $(this).removeAttr('width');
+    });
+    $('.internalPage td').each(function() {
+      $(this).removeAttr('width');
+    });
+  });
 </script>
