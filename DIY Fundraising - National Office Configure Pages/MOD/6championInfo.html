@@ -11,3 +11,28 @@
     display: none !important;
   }
 </style>
+
+
+<script type="text/javascript">
+  document.addEventListener("DOMContentLoaded", function(){
+
+  document.getElementById("cons_title").firstChild.nextSibling.innerHTML = "Title"
+  document.getElementById("cons_first_name").setAttribute("placeholder", "First");
+  document.getElementById("cons_middle_name").setAttribute("placeholder", "Middle");
+  document.getElementById("cons_last_name").setAttribute("placeholder", "Last");
+  document.getElementById("cons_suffix").firstChild.nextSibling.innerHTML = "Suffix";
+  document.getElementById("cons_prof_suffix").firstChild.nextSibling.innerHTML = "Professional Suffix";
+
+  document.getElementById("cons_email").setAttribute("placeholder", "Email");
+  document.getElementById("cons_street1").setAttribute("placeholder", "Street 1");
+  document.getElementById("cons_street2").setAttribute("placeholder", "Street 2");
+
+  document.getElementById("cons_city").setAttribute("placeholder", "City");
+  document.getElementById("cons_state").firstChild.nextSibling.innerHTML = "State";
+  document.getElementById("cons_zip_code").setAttribute("placeholder", "Zip");
+  document.getElementById("cons_phone").setAttribute("placeholder", "Phone");
+
+  })
+
+
+</script>
