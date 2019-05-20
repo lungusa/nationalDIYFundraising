@@ -1,0 +1,68 @@
+<script type="text/javascript">
+  // remove Search
+  document.getElementById("___gcse_0").style.display = "none";
+
+  // remove purple background and border
+  var purple = document.getElementsByClassName("FormBoxNoWidth");
+  for (var i = 0; i < purple.length; i++) {
+    purple[i].style.backgroundColor = "#fff";
+    purple[i].style.border = "none";
+  }
+  // remove border
+  $(".FormBoxNoWidth table").css("border", "none");
+
+  // adjusting size of text inputs
+  var inputText = document.querySelectorAll("input[type='text']");
+  for (var i = 0; i < inputText.length; i++) {
+    inputText[i].style.width = "230px";
+    inputText[i].style.fontSize = "16px";
+  }
+
+  // adjusting size of select
+  var selects = document.getElementsByTagName("select");
+  for (var i = 0; i < selects.length; i++) {
+    selects[i].style.height = "36px";
+    selects[i].style.width = "246px";
+  }
+
+  // adding space between credit card info selects
+  document.getElementById("ccExp_MONTH").style.marginBottom = "20px";
+
+
+  // formatting credit card type
+  var cards = document.getElementsByName("TENDER_INSTANCE_LIST_CTRL");
+  for (var i = 0; i < cards.length; i++) {
+    cards[i].style.width = "23px";
+  }
+
+  // formatting credit card type
+  var cardsWidth = document.getElementsByClassName("centered");
+  for (var i = 0; i < cardsWidth.length; i++) {
+    cardsWidth[i].style.margin = "30px";
+  }
+
+
+  // removing out of place links
+  var hideLink = document.getElementsByClassName("Smaller");
+  for (var i = 0; i < hideLink.length; i++) {
+    hideLink[i].style.display = "none";
+  }
+
+  var prev = document.getElementById("CANCEL_DIRECT_PAY_FORM");
+
+  var next = document.getElementById("PARSE_PAYMENT_FORM");
+
+  var cancel = document.getElementById("CANCEL_PAYMENT_PROCESS");
+
+  $(".FormBoxNoWidth").after('<div id="navButtons"><div id="prev" style="float: left;"></div><div id="next" style="float: right;"></div><br><div id="cancel"></div></div>');
+
+  $("#prev").append(prev);
+  $("#next").append(next);
+  $("#cancel").append(cancel);
+
+  // $(prev).remove();
+  // $(next).remove();
+  $(cancel).remove();
+</script>
+
+<!-- <div id="navButtons"><div id="prev" style="float: left;"></div><div id="next" style="float: right;"></div><br><div id="cancel"></div></div> -->
