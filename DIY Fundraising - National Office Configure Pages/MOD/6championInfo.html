@@ -1,5 +1,16 @@
-<p>If you are already registered on our site, you should log in with your existing user name and password (which you can also use to access the Champion Center).</p>
-<p>You'll find the login link in the upper right corner of this page. <!-- If you cannot recall your existing username and/or password, <a href="mailto:webmaster@lung.org?subject=Setting Up DIY Fundraising - Need Login Info&body=I'm setting up a new DIY Fundraising page, but I cannot remember my existing username and password. Can you please assist? Thanks!">click here to request login assistance</a>. --></p>
+<div style="display: none">
+  <p>If you are already registered on our site, you should log in with your existing user name and password (which you can also use to access the Champion Center).</p>
+  <p >You'll find the login link in the upper right corner of this page.
+    <!-- If you cannot recall your existing username and/or password, <a href="mailto:webmaster@lung.org?subject=Setting Up DIY Fundraising - Need Login Info&body=I'm setting up a new DIY Fundraising page, but I cannot remember my existing username and password. Can you please assist? Thanks!">click here to request login assistance</a>. -->
+  </p>
+</div>
+
+<!-- TEXT OPTIONS COPY: If you are already registered on our site, you should log in with your existing user name and password (which you can also use to access the Champion Center). If you have not previously registered, you must enter your Name and Email address below as well as create a User Name and Password so that you can log into the Champion Center. -->
+
+<p style="background: #ececec; padding: 25px; font-weight: 700;">
+  <span style="color: red;">NOTE: </span>You must register with a new email address AND new username in order to create a new fundraising page. If you are trying to access a previously created fundraising page, <a href="https://action.lung.org/site/TR/Events/General?pg=tgreeting&fr_id=14341#access">navigate to this page</a> and log in with your already existing information at the <em>Access Your DIY Fundraising Page</em> section.
+</p>
+
 
 
 <style media="screen">
@@ -10,29 +21,57 @@
   #cancel{
     display: none !important;
   }
+
+  @media( max-width: 768px) {
+    .Smaller {}
+    /*label[for="cons_title"],label[for="cons_first_name"],label[for="cons_middle_name"],label[for="cons_last_name"],label[for="cons_suffix"],label[for="cons_prof_suffix"],label[for="cons_city"],label[for="cons_state"],label[for="cons_zip_code"] {display: none;}*/
+
+    /*td < label[for="cons_title"] { display: none; }
+    td < label[for="cons_first_name"] { display: none; }
+    td < label[for="cons_middle_name"] { display: none; }
+    td < label[for="cons_last_name"] { display: none; }
+    td < label[for="cons_suffix"] { display: none; }
+    td < label[for="cons_prof_suffix"] { display: none; }
+
+    td < label[for="cons_city"] { display: none; }
+    td < label[for="cons_state"] { display: none; }
+    td < label[for="cons_zip_code"] { display: none; }*/
+
+    .FormBox select{
+      top: 7px;
+    }
+  }
+
 </style>
 
 
 <script type="text/javascript">
-  document.addEventListener("DOMContentLoaded", function(){
+  document.addEventListener("DOMContentLoaded", function() {
 
-  document.getElementById("cons_title").firstChild.nextSibling.innerHTML = "Title"
-  document.getElementById("cons_first_name").setAttribute("placeholder", "First");
-  document.getElementById("cons_middle_name").setAttribute("placeholder", "Middle");
-  document.getElementById("cons_last_name").setAttribute("placeholder", "Last");
-  document.getElementById("cons_suffix").firstChild.nextSibling.innerHTML = "Suffix";
-  document.getElementById("cons_prof_suffix").firstChild.nextSibling.innerHTML = "Professional Suffix";
+    document.getElementById("cons_title").firstChild.nextSibling.innerHTML = "Title";
+    document.getElementById("cons_first_name").setAttribute("placeholder", "First*");
+    document.getElementById("cons_middle_name").setAttribute("placeholder", "Middle");
+    document.getElementById("cons_last_name").setAttribute("placeholder", "Last*");
+    document.getElementById("cons_suffix").firstChild.nextSibling.innerHTML = "Suffix";
+    document.getElementById("cons_prof_suffix").firstChild.nextSibling.innerHTML = "Professional Suffix";
 
-  document.getElementById("cons_email").setAttribute("placeholder", "Email");
-  document.getElementById("cons_street1").setAttribute("placeholder", "Street 1");
-  document.getElementById("cons_street2").setAttribute("placeholder", "Street 2");
+    document.getElementById("cons_email").setAttribute("placeholder", "Email");
+    document.getElementById("cons_street1").setAttribute("placeholder", "Street 1");
+    document.getElementById("cons_street2").setAttribute("placeholder", "Street 2");
 
-  document.getElementById("cons_city").setAttribute("placeholder", "City");
-  document.getElementById("cons_state").firstChild.nextSibling.innerHTML = "State";
-  document.getElementById("cons_zip_code").setAttribute("placeholder", "Zip");
-  document.getElementById("cons_phone").setAttribute("placeholder", "Phone");
+    document.getElementById("cons_city").setAttribute("placeholder", "City");
+    document.getElementById("cons_state").firstChild.nextSibling.innerHTML = "State";
+    document.getElementById("cons_zip_code").setAttribute("placeholder", "Zip");
+    document.getElementById("cons_phone").setAttribute("placeholder", "Phone");
+
+    var smallers = document.getElementsByClassName("Smaller");
+    for (var i = 0; i < smallers.length; i++) {
+      if(smallers[i].innerHTML.includes("<label") ){
+        smallers[i].style.display = "none";
+      }
+    }
+
+
 
   })
-
-
 </script>
