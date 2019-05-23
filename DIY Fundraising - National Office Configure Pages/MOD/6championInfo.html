@@ -8,7 +8,9 @@
 <!-- TEXT OPTIONS COPY: If you are already registered on our site, you should log in with your existing user name and password (which you can also use to access the Champion Center). If you have not previously registered, you must enter your Name and Email address below as well as create a User Name and Password so that you can log into the Champion Center. -->
 
 <p style="background: #ececec; padding: 25px; font-weight: 700;">
-  <span style="color: red;">NOTE: </span>You must register with a new email address AND new username in order to create a new fundraising page. If you are trying to access a previously created fundraising page, <a href="https://action.lung.org/site/TR/Events/General?pg=tgreeting&fr_id=14341#access">navigate to this page</a> and log in with your already existing information at the <em>Access Your DIY Fundraising Page</em> section.
+  <span style="color: red;">NOTE: </span>If you are not already logged in, you must register with a new email address and new username in order to create a new fundraising page.
+  <br>
+   If you are trying to access a previously created fundraising page, navigate to the <a href="https://action.lung.org/site/TR/Events/General?pg=tgreeting&fr_id=14341#access">DIY Fundraising homepage</a> and log in with your already existing information at the <em>Access Your DIY Fundraising Page</em> section.
 </p>
 
 
@@ -47,6 +49,7 @@
 
 <script type="text/javascript">
   document.addEventListener("DOMContentLoaded", function() {
+    document.getElementById("captcha").nextSibling.setAttribute("for", "captchaText");
 
     document.getElementById("cons_title").firstChild.nextSibling.innerHTML = "Title";
     document.getElementById("cons_first_name").setAttribute("placeholder", "First*");
